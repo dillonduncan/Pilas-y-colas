@@ -3,6 +3,7 @@ from collections import deque
 class Notas:
     def ingresoNotas(self):
         self.listaNotas=deque()
+        print("--Ingresao de notas--")
         while True:   
             try:        
                 nota=int(input("Ingrese su nota: "))
