@@ -8,8 +8,8 @@ class Notas:
             try:        
                 nota=int(input("Ingrese su nota: "))
                 self.listaNotas.append(nota)
-                continuar=input("Desea continuar? SI-NO: ").upper()
-                if continuar!="SI":
+                otraNota=input("Desea continuar? SI-NO: ").upper()
+                if otraNota!="SI":
                     break  
             except ValueError:
                 print("Ingrese un valor valido")    
