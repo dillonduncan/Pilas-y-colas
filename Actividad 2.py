@@ -8,7 +8,7 @@ class Persona:
         self.edad = edad
 
     def __str__(self):
-        return (f"{self.codigo}, {self.nombre}. {self.telefono}, {self.edad}")
+        return (f"{self.codigo}, {self.nombre}, {self.telefono}, {self.edad}")
 
 def ingresoPersonas():
     listaPersonas= deque()
@@ -33,9 +33,20 @@ def ingresoPersonas():
     return listaPersonas
 
 def salidaPersonas(listaPersonas):
+    saliPersonas= deque()
     print("--Listado de personas--")
-    for persona in listaPersonas:
+
+    while len(listaPersonas)>0:
+        persona=listaPersonas.pop()
+        saliPersonas.append(persona)
         print(persona)
+
+    print("Listado de personas retirando un elemento--")
+    saliPersonas.popleft()
+    for persona in saliPersonas:
+        print(persona)
+
+    print(f"Cantidad de elementos en la lista: {len(saliPersonas)}")
 
 personas=ingresoPersonas()
 salidaPersonas(personas)
