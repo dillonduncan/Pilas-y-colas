@@ -7,6 +7,7 @@ class Persona:
         self.telefono = telefono
         self.edad = edad
 
+    #formato de salida del objeto
     def __str__(self):
         return (f"{self.codigo}, {self.nombre}, {self.telefono}, {self.edad}")
 

@@ -16,9 +16,8 @@ class Notas:
         return self.listaNotas
     
     def calculoNotas(self):
-        cantPares=0
-        sumaNotas=0
-        promNotas=0
+        cantPares=0 #contador de numeros pares
+        sumaNotas=0 #suma de todos los datos ingresados
         ultimaNota=self.listaNotas[-1]
         self.salidaNotas=deque()
         while len(self.listaNotas)>0:
@@ -29,9 +28,11 @@ class Notas:
             sumaNotas += nota
             if(nota%2==0):
                 cantPares += 1
-            
+        
+        #calculo de promedio de datos ingresados
         promNotas=sumaNotas/len(self.salidaNotas)
         
+        #Salida de datos
         print("---Salida de notas---")        
         print("Notas: {}" .format(self.salidaNotas))  
         print(f"Cantidad de numeros pares: {cantPares}")
